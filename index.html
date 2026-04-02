@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Car — Desk Drive</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- UI Overlay -->
+  <div id="ui">
+    <div id="speedometer">
+      <span id="speed-value">0</span>
+      <span id="speed-unit">km/h</span>
+    </div>
+
+    <div id="controls-hint">
+      <div class="hint-keys">
+        <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+      </div>
+      <p>to drive</p>
+    </div>
+
+    <div id="reset-prompt" class="hidden">
+      Press <span class="key">R</span> to reset
+    </div>
+
+    <div id="race-hud">
+      <div id="lap-counter">Lap 0/3</div>
+      <div id="lap-timer">0:00.000</div>
+      <div id="best-lap">Best: --:--</div>
+    </div>
+
+    <div id="race-finished" class="hidden">
+      <div id="finish-title">Race Complete!</div>
+      <div id="finish-total"></div>
+      <div id="finish-best"></div>
+      <div id="finish-restart">Press <span class="key">R</span> to restart</div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
